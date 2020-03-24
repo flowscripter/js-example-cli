@@ -1,0 +1,15 @@
+module.exports = {
+    projects: [
+        {
+            displayName: 'cli',
+            moduleFileExtensions: [
+                'js',
+                'json'
+            ],
+            testEnvironment: 'node',
+            testMatch: [
+                '**/e2e/cli/**/?(*.)test.js'
+            ]
+        }
+    ]
+};
