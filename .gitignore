@@ -4,3 +4,4 @@ node_modules
 dist
 reports
 docs
+/js-example-cli.iml
