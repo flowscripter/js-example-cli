@@ -36,11 +36,11 @@ After building, the CLI can be run with:
 
 Then run with with an invalid argument:
 
-    ./bin/js-example-cli hello
+    ./bin/js-example-cli foo
 
 Then run with with a valid argument:
 
-    ./bin/js-example-cli --hello=world
+    ./bin/js-example-cli greeter --subject=lovely
 
 To run with debug logging:
 
@@ -55,7 +55,7 @@ To simulate installation:
 
 #### Installation
 
-    npm install -g @flowscropterjs-example-cli
+    npm install -g @flowscripter/js-example-cli
     js-example-cli
 
 ## Further Details
