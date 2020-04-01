@@ -13,7 +13,7 @@ describe('CLI test', () => {
     test('invalid command', (done) => {
         nixt()
             .run('./bin/js-example-cli hello')
-            .stderr(/.*Unused args: hello*/)
+            .stderr(/.*Unused arg: hello*/)
             .stdout(/.*try running*/)
             .end(done);
     });
@@ -29,6 +29,14 @@ describe('CLI test', () => {
         nixt()
             .run('./bin/js-example-cli greeter --subject you')
             .stdout(/.*Hello you*/)
+            .end(done);
+    });
+
+    test('valid command with invalid option', (done) => {
+        nixt()
+            .run('./bin/js-example-cli greeter -w')
+            .stdout(/.*try running\?*/)
+            .stderr(/.*Unused arg: -w/)
             .end(done);
     });
 });
