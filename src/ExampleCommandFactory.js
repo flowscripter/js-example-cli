@@ -6,9 +6,13 @@ export default class ExampleCommandFactory {
     getCommands() {
         return [{
             name: 'greeter',
+            description: 'The classic example',
             options: [{
                 name: 'subject',
-                defaultValue: 'world'
+                defaultValue: 'world',
+                description: 'Who to greet',
+                shortAlias: 's',
+                isOptional: true
             }],
             positionals: [],
             run: async (commandArgs, context) => {
@@ -16,7 +20,7 @@ export default class ExampleCommandFactory {
                 if (printer == null) {
                     throw new Error('STDOUT_PRINTER_SERVICE not available in context');
                 }
-                printer.info(`Hello ${commandArgs.subject}`);
+                printer.info(`Hello ${commandArgs.subject}\n`);
             }
         }];
     }
