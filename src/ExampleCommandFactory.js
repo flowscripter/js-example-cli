@@ -16,7 +16,7 @@ export default class ExampleCommandFactory {
             }],
             positionals: [],
             run: async (commandArgs, context) => {
-                const printer = context.getService(STDOUT_PRINTER_SERVICE);
+                const printer = context.serviceRegistry.getServiceById(STDOUT_PRINTER_SERVICE);
                 if (printer == null) {
                     throw new Error('STDOUT_PRINTER_SERVICE not available in context');
                 }

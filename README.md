@@ -58,6 +58,21 @@ To simulate installation:
     npm install -g @flowscripter/js-example-cli
     js-example-cli
 
+#### Example Plugin Support
+
+Install a sample plugin:
+
+    js-example-cli plugin:add js-example-cli-plugin
+
+View the new commands available:
+
+    js-example-cli help
+
+Use the new plugin:
+
+    js-example-cli cow
+
+
 ## Further Details
 
 Further details on project configuration files and Javascript version support can be found in
