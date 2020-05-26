@@ -26,23 +26,25 @@ E2E test: `npm run e2e`
 
 ## Run with Node (12.6.0+)
 
+**NOTE**: End-to-end testing is only performed on MacOS and Linux (not Windows).
+
 #### Running From Source
 
 After building, the CLI can be run with:
 
-    ./bin/js-example-cli
+    bin/js-example-cli
 
 Then run with with an invalid argument:
 
-    ./bin/js-example-cli foo
+    bin/js-example-cli foo
 
 Then run with with a valid argument:
 
-    ./bin/js-example-cli greeter --subject=lovely
+    bin/js-example-cli greeter --subject=lovely
 
 To run with debug logging:
 
-    DEBUG=* NODE_NO_WARNINGS=1 ./bin/js-example-cli
+    DEBUG=* NODE_NO_WARNINGS=1 bin/js-example-cli
 
 #### Simulated Installation
 
