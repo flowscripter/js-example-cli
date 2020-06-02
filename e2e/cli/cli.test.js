@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import path from 'path';
 import fs from 'fs';
 import nixt from 'nixt';
 
@@ -61,7 +60,7 @@ describe('CLI test', () => {
     });
 
     test('command can be installed, run and uninstalled', async () => {
-        const pluginLocation = path.join(process.cwd(), 'js-example-cli-plugins');
+        const pluginLocation = '/tmp/js-example-cli-plugins';
         try {
             fs.rmdirSync(pluginLocation, { recursive: true });
         } catch (err) {

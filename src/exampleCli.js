@@ -1,4 +1,3 @@
-import path from 'path';
 import { NodeCLI, PLUGIN_REGISTRY_SERVICE } from '@flowscripter/cli-framework';
 import ExampleCommandFactory from './ExampleCommandFactory';
 
@@ -8,7 +7,7 @@ import ExampleCommandFactory from './ExampleCommandFactory';
     const serviceConfigs = new Map();
     serviceConfigs.set(PLUGIN_REGISTRY_SERVICE, {
         moduleScope: '@flowscripter',
-        pluginLocation: path.join(process.cwd(), 'js-example-cli-plugins')
+        pluginLocation: '/tmp/js-example-cli-plugins'
     });
 
     const nodeCli = new NodeCLI('js-example-cli', serviceConfigs, new Map());
