@@ -32,7 +32,6 @@ module.exports = [
             'zlib',
             'url',
             'string_decoder',
-            'events',
             'buffer',
             'constants',
             'readable-stream'
