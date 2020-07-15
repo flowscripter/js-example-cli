@@ -1,18 +1,8 @@
 import {
     PLUGIN_REGISTRY_SERVICE,
     STDOUT_PRINTER_SERVICE,
-    BaseNodeCLI,
-    MultiCommandHelpGlobalCommand,
-    MultiCommandHelpSubCommand,
-    PrompterService,
-    StderrPrinterService,
-    StdoutPrinterService,
-    UsageCommand,
-    VersionCommand
+    AdvancedMultiCommandNodeCLI
 } from '@flowscripter/cli-framework';
-
-const helpGlobalCommand = new MultiCommandHelpGlobalCommand();
-const usageCommand = new UsageCommand(helpGlobalCommand);
 
 function getCommand() {
     return {
@@ -45,16 +35,7 @@ function getCommand() {
         pluginLocation: '/tmp/js-example-cli-plugins'
     });
 
-    const nodeCli = new BaseNodeCLI([
-        new StderrPrinterService(90),
-        new StdoutPrinterService(90),
-        new PrompterService(90)
-    ], [
-        helpGlobalCommand,
-        new MultiCommandHelpSubCommand(),
-        new VersionCommand(),
-        getCommand()
-    ], serviceConfigs, new Map(), 'js-example-cli', usageCommand, usageCommand);
+    const cli = new AdvancedMultiCommandNodeCLI([], [getCommand()], serviceConfigs, new Map(), 'js-example-cli');
 
-    await nodeCli.execute();
+    await cli.execute();
 })();
