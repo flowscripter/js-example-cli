@@ -29,7 +29,7 @@
         "dist/**/*"
     ],
     "engines": {
-        "node": "12.18.2"
+        "node": ">=14.4.0"
     },
     "bin": {
         "js-example-cli": "./bin/js-example-cli"
@@ -39,7 +39,7 @@
         "build": "npx rollup -c",
         "watch": "npx rollup -c --watch",
         "lint": "npx eslint ./src/**/*.js",
-        "e2e": "npx jest --config=jest.e2e.config.js"
+        "e2e": "npx jest --config=jest.e2e.config.json"
     },
     "devDependencies": {
         "@babel/core": "7.10.5",
