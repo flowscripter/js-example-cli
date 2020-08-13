@@ -65,6 +65,6 @@
         "semantic-release": "17.1.1"
     },
     "dependencies": {
-        "@flowscripter/cli-framework": "5.4.10"
+        "@flowscripter/cli-framework": "5.4.11"
     }
 }
