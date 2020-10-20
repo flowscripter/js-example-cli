@@ -61,7 +61,7 @@
         "rollup-plugin-commonjs": "10.1.0",
         "rollup-plugin-eslint": "7.0.0",
         "rollup-plugin-node-resolve": "5.2.0",
-        "rollup-plugin-peer-deps-external": "2.2.3",
+        "rollup-plugin-peer-deps-external": "2.2.4",
         "semantic-release": "17.2.1"
     },
     "dependencies": {
