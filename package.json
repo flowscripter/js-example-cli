@@ -62,7 +62,7 @@
         "rollup-plugin-eslint": "7.0.0",
         "rollup-plugin-node-resolve": "5.2.0",
         "rollup-plugin-peer-deps-external": "2.2.4",
-        "semantic-release": "17.2.4"
+        "semantic-release": "17.3.0"
     },
     "dependencies": {
         "@flowscripter/cli-framework": "5.5.9"
